@@ -1,0 +1,60 @@
+{% load static %}
+
+<!doctype html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="{% static 'main/css/index.css' %}" rel="stylesheet">
+        <link href="{% static 'main/css/toast.min.css' %}" rel="stylesheet">
+        <script src="{% static 'main/js/toast.min.js' %}"></script>
+        <title>{{ site_name }}</title>
+    </head>
+    <body>
+        <form action="{% url 'parse' %}" id="start-parse" method="post">
+            {% csrf_token %}
+            <ul>
+                {% for site in sites %}
+                    <li>
+                        <label for="site-{{ site }}">{{ site }}</label>
+                        <input id="site-{{ site }}" type="checkbox" name="sites" value="{{ site.id }}"/>
+                    </li>
+                {% endfor %}
+
+            </ul>
+            <button type="submit">Ok!</button>
+
+
+        <script>
+            document.getElementById('start-parse').addEventListener('submit', function(event) {
+                event.preventDefault(); // Предотвращаем отправку формы
+
+                const data = new URLSearchParams(new FormData(this)); // Получаем данные из формы
+
+                fetch('{% url 'parse' %}', {
+                    method: 'POST',
+                    body: data,
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+                })
+                .then(data => {
+                    new Toast({
+                      title: 'Результат',
+                      text: 'Парсинг виконано!!!',
+                      theme: 'light',
+                      autohide: true,
+                      interval: 10000
+                    });
+                })
+            });
+        </script>
+
+        </form>
+
+
+
+    </body>
+</html>
