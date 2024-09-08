@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import ParseReport
 
-# Register your models here.
+
+@admin.register(ParseReport)
+class ParseReportAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'created_at')

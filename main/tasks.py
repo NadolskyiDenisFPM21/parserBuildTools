@@ -3,12 +3,14 @@ from celery import shared_task
 
 from main.parseCore.parser import AsyncParser
 
+from sites.models import Site
+
 
 @shared_task
-def task(request, sites):
+def task():
+    sites = Site.objects.all()
     parser = AsyncParser(delay=.5)
-    for siteId in request.POST.getlist('sites'):
-        site = sites.get(pk=siteId)
+    for site in sites:
         links = []
         for product in site.get_goods():
             links.append({'id': product.id, 'link': product.link})
@@ -18,3 +20,4 @@ def task(request, sites):
             site.set_good_price(price['id'], price['price'])
 
     return "Task Complete"
+

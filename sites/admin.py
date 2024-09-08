@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from sites.models import Site, SiteGoods
+from sites.models import Site, SiteGoods, Direction
 
 from import_export.admin import ImportExportActionModelAdmin
 from import_export import resources
@@ -34,3 +34,7 @@ class SiteAdmin(ImportExportActionModelAdmin):
     list_display = ('name', 'link')
     inlines = [SiteGoodsInline, ]
 
+
+@admin.register(Direction)
+class DirectionAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')

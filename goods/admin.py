@@ -30,7 +30,7 @@ class GoodsResource(resources.ModelResource):
 @admin.register(Goods)
 class GoodsAdmin(ImportExportActionModelAdmin):
     resource_class = GoodsResource
-    fields = ('sku', 'name', 'price')
+    fields = ('sku', 'name', 'price', 'directions')
     list_display = ('id', 'sku', 'name', 'price')
     search_fields = ('id', 'sku', 'name', 'price')
     list_filter = (
