@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Парсер</title>
+    <link rel="stylesheet" href="/static/main/css/login.css">
+</head>
+<body>
+<h1>Вхід в систему</h1>
+
+<form method="post">
+    <input type="hidden" name="csrfmiddlewaretoken"
+           value="2KdTjkipqcbDXvjgnwstQJQ0b18PH48q1fmz7Y54ELvW5ONSyoYHwDKCyDmcny3m">
+    <div>
+        <label for="username">Імʼя користувача:</label>
+        <input type="text" name="username" id="username" required>
+    </div>
+    <div>
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" id="password" required>
+    </div>
+    <button type="submit">Вхід</button>
+</form>
+</body>
+</html>
