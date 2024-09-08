@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c8bd2734-39b8-446d-82af-90b168ecaa2e" name="Changes" comment="deploy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parserBuildTools/.env" beforeDir="false" afterPath="$PROJECT_DIR$/parserBuildTools/.env" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +133,7 @@
       <workItem from="1724929526345" duration="10000" />
       <workItem from="1704091049902" duration="4209000" />
       <workItem from="1725810552471" duration="166000" />
-      <workItem from="1725810804700" duration="87000" />
+      <workItem from="1725810804700" duration="320000" />
     </task>
     <task id="LOCAL-00001" summary="deploy">
       <option name="closed" value="true" />
@@ -141,7 +143,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725810852432</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="deploy">
+      <option name="closed" value="true" />
+      <created>1725810897406</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725810897406</updated>
+    </task>
+    <task id="LOCAL-00003" summary="deploy">
+      <option name="closed" value="true" />
+      <created>1725810944045</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725810944045</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
