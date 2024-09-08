@@ -5,99 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8bd2734-39b8-446d-82af-90b168ecaa2e" name="Changes" comment="deploy">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/DjangoServer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/goods/migrations/0003_direction_goods_directions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/excelReport/excel_creater.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/migrations/0002_parsereport_direction.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_0UQHxep.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_1L35SpT.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_3CUNM1E.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_4HL8Daf.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_4sO7XAJ.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_4yAWbzn.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_682Nn5g.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_69XzklX.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_6bzJTQY.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_6tkwclk.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_75DPS6U.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_76QkXsM.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_7IUoEDp.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_81tPoPY.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_8Jy2wLz.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_EngJiQa.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_EsBSlny.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_GBG6WU3.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_Gh50qXB.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_I9cQ2Mw.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_IYA6v8Y.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_IhQruxT.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_Ixwkk9g.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_JeGbloi.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_K8xGuMF.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_K9X32bu.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_MiUXzCj.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_N4zz91F.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_NSbGmJr.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_PUpkqg4.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_Q5KdRWP.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_QwovvQq.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_ROLwlF5.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_ReiOOW8.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_T919KNn.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_UBUhvyP.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_URvbmG1.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_VgtHWz7.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_VjwKoEd.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_WB40cNe.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_XTCwOIR.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_Y7eLPcZ.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_apJhjkN.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_bISfBCn.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_bYiYlAJ.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_blVgNAW.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_c6i6gVZ.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_dlieoKo.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_eZJbpBf.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_fWFg3Pq.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_fe5fvme.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_gTiu5UX.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_h8lt3Ib.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_iEFQzoN.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_kSclDOq.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_lWN4wvx.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_nEdSIq3.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_nvsbvop.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_pRR9HcF.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_ppb77m7.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_pufKtnV.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_sXbtaJA.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_td9z9FV.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_x8aAE1o.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_xL80ngC.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/Report_zJh5IVG.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sites/migrations/0005_sitegoods_difference.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sites/migrations/0006_direction_site_direction.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sites/migrations/0007_alter_site_direction_delete_direction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/parserBuildTools.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/parserBuildTools.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goods/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/goods/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goods/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/goods/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/tasks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parserBuildTools/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/parserBuildTools/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parserBuildTools/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/parserBuildTools/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/sites/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sites/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,26 +56,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Django Server.DjangoServer.executor": "Run",
-    "Django Server.parserBuildTools.executor": "Run",
-    "HTTP Request.generated-requests | #1.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "email-sends",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Django Server.DjangoServer.executor&quot;: &quot;Run&quot;,
+    &quot;Django Server.parserBuildTools.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;email-sends&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/main/static/main/js" />
@@ -223,7 +131,17 @@
       <workItem from="1724929526345" duration="10000" />
       <workItem from="1704091049902" duration="4209000" />
       <workItem from="1725810552471" duration="166000" />
+      <workItem from="1725810804700" duration="87000" />
     </task>
+    <task id="LOCAL-00001" summary="deploy">
+      <option name="closed" value="true" />
+      <created>1725810852432</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725810852432</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
