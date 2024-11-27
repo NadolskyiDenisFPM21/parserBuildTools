@@ -39,14 +39,12 @@ class AsyncParser:
         headers = {'User-Agent': self.user_agent}
         try:
             async with session.get(link['link'], headers=headers, timeout=aiohttp.ClientTimeout(total=10)) as response:
-                print(link['id'], link['link'])
                 text = await response.text()
                 price_tags = BeautifulSoup(text, 'html.parser').select(tags_trail)
                 price = price_tags[0].text if price_tags else -1
                 price = price_to_int(price)
                 return {'id': link['id'], 'price': price}
         except (ClientConnectorError, aiohttp.ClientError, asyncio.TimeoutError) as e:
-            print(f"Error fetching {link['link']}: {e}")
             return {'id': link['id'], 'price': -1}
 
     async def parse(self, links: list, tags_trail: str) -> list:

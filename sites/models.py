@@ -1,5 +1,7 @@
 from django.db import models
 from goods.models import Goods, Direction
+from django.db import transaction
+
 
 class Site(models.Model):
     name = models.CharField(max_length=100, verbose_name='Сайт')
@@ -10,11 +12,22 @@ class Site(models.Model):
     def get_goods(self):
         return self.site_goods.all()
 
+
     def set_good_price(self, id, price):
-        product = self.site_goods.get(pk=id)
-        product.difference = price - product.goods.price
-        product.price_on_site = price
-        product.save()
+        try:
+            product = self.site_goods.get(pk=id)
+
+            if not product:
+                print("Product not found")
+                return False
+            else:
+                print(product)
+            product.difference = float(price) - float(product.goods.price)
+            product.price_on_site = price
+            product.save()
+            return True
+        except Exception as e:
+            return e
 
     @property
     def difference_count(self):
@@ -34,6 +47,14 @@ class SiteGoods(models.Model):
     link = models.URLField(max_length=500, verbose_name='Посилання на товар')
     price_on_site = models.DecimalField(max_digits=15, decimal_places=2, default=0, verbose_name='Ціна на сайті')
     difference = models.DecimalField(max_digits=15, decimal_places=2, default=0, verbose_name='Розбіжність')
+
+
+    def set_price(self, price):
+        self.difference = float(price) - float(self.goods.price)
+        self.price_on_site = price
+        self.save(force_update=True)
+
+        return True
 
     def __str__(self):
         return self.goods.name + ' ' + self.site.name

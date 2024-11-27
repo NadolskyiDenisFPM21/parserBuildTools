@@ -66,7 +66,7 @@ def format_data_sheet2(direction_id):
     sites = Site.objects.filter(direction=direction_id).order_by('id')
     data = []
     for i, site in enumerate(sites):
-        data.append([i, site.name, site.get_goods().count(), site.difference_count(), f"{site.difference_percent}%"])
+        data.append([i, site.name, site.get_goods().count(), site.difference_count, f"{site.difference_percent}%"])
 
     return headers, data
 
@@ -97,8 +97,10 @@ def download_report(request, file_id):
 
 
 def task_parse(request):
+    # product = SiteGoods.objects.get(pk=1)
+    # product.set_price(1000)
     task.delay()
-    return JsonResponse({'status': True})
+    return redirect('index')
 
 
 def login_view(request):
