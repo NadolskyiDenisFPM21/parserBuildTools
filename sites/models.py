@@ -18,10 +18,7 @@ class Site(models.Model):
             product = self.site_goods.get(pk=id)
 
             if not product:
-                print("Product not found")
                 return False
-            else:
-                print(product)
             product.difference = float(price) - float(product.goods.price)
             product.price_on_site = price
             product.save()
@@ -35,6 +32,8 @@ class Site(models.Model):
 
     @property
     def difference_percent(self):
+        if self.site_goods.count() == 0:
+            return 0
         return int(round(self.difference_count/self.site_goods.count()*100))
 
     def __str__(self):

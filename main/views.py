@@ -4,6 +4,7 @@ from django.http import JsonResponse, HttpResponse, Http404
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.core.files.base import ContentFile
+import urllib
 
 from sites.models import Site, SiteGoods
 from goods.models import Goods, Direction
@@ -15,7 +16,7 @@ from .excelReport.excel_creater import ExcelCreater
 @login_required(login_url='login')
 def index(request):
     directions = Direction.objects.all()
-    parse_reports = ParseReport.objects.all().order_by('-id')[:10]
+    parse_reports = ParseReport.objects.all().order_by('-id')[:5]
     context = {'parse_reports': parse_reports, 'directions': directions}
 
     return render(request, 'index.html', context)
@@ -29,6 +30,7 @@ def format_data(direction_id):
     ]
     sites = Site.objects.filter(direction=direction_id).order_by('id')
     goods = list(Goods.objects.filter(directions=direction_id).order_by('id'))
+    print(goods)
     data = []
 
     for product in goods:
@@ -46,8 +48,8 @@ def format_data(direction_id):
         headers[2].append("")
 
         for row in data:
+            print(row[1], site)
             product = SiteGoods.objects.filter(goods__sku=row[1], site=site).first()
-            print(row[1], product, site.name)
             if product:
                 row.append([product.price_on_site, product.link, product.difference])
                 if product.difference != 0:
@@ -72,13 +74,13 @@ def format_data_sheet2(direction_id):
 
 
 def create_report(request, direction_id):
-    report = ExcelCreater()
+    direction = Direction.objects.get(id=direction_id)
+    report = ExcelCreater(direction.name)
     report.create(*format_data(direction_id))
     report.create2(*format_data_sheet2(direction_id))
     excel_file = report.get_file()
     django_file = ContentFile(excel_file.getvalue(), 'Report.xlsx')
 
-    direction = Direction.objects.get(id=direction_id)
     parse_report = ParseReport.objects.create(file=django_file, name='Report', direction=direction)
     parse_report.save()
     return redirect('index')
@@ -88,9 +90,11 @@ def download_report(request, file_id):
     try:
         parse_report = ParseReport.objects.get(id=file_id)
         format_date = parse_report.created_at.strftime('%d-%m-%Y %H-%M')
+        filename = f'{parse_report.name} {parse_report.direction.name} {format_date}.xlsx'
+        filename_encoded = urllib.parse.quote(filename)
         response = HttpResponse(parse_report.file,
                                 content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-        response['Content-Disposition'] = f'attachment; filename="{parse_report.name} {parse_report.direction.name} {format_date}.xlsx"'
+        response['Content-Disposition'] = f'attachment; filename="{filename_encoded}"'
         return response
     except ParseReport.DoesNotExist:
         raise Http404('Файл не знайдено!')

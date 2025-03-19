@@ -5,11 +5,12 @@ from io import BytesIO
 
 
 class ExcelCreater:
-    def __init__(self):
+    def __init__(self, direction_name: str):
+        self.direction_name = direction_name
         # Создание нового файла Excel и выбор активного листа
         self.wb = Workbook()
         self.ws = self.wb.active
-
+        self.ws.title = self.direction_name
         self.fill_headers = PatternFill(fgColor="99C295", fill_type="solid")
         self.fill_cell = PatternFill(fgColor="DEE0A8", fill_type="solid")
         self.fill_cell_less = PatternFill(fgColor="FF695E", fill_type="solid")
@@ -70,8 +71,8 @@ class ExcelCreater:
 
     def create2(self, headers, data):
         self.column_widths = [4, 50, 20, 20, 20]
-        self.wb.create_sheet(title="Sheet2")
-        self.ws = self.wb.get_sheet_by_name("Sheet2")
+        self.wb.create_sheet(title="Відсоток порушень")
+        self.ws = self.wb["Відсоток порушень"]
         self.write_headers(headers)
         self.write_lines(data, 1)
 

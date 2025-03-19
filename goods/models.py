@@ -10,10 +10,10 @@ class Direction(models.Model):
 
 class Goods(models.Model):
     sku = models.CharField(max_length=10, verbose_name="SKU")
-    name = models.CharField(max_length=50, verbose_name="Назва")
+    name = models.CharField(max_length=200, verbose_name="Назва")
     price = models.DecimalField(decimal_places=2, verbose_name="Ціна", max_digits=15)
-    directions = models.ManyToManyField(Direction, related_name="directions", verbose_name="Напрямки",
-                                        blank=True, null=True)
+    directions = models.ManyToManyField(Direction, related_name="goods", verbose_name="Напрямки",
+                                        blank=True)
 
     class Meta:
         verbose_name = "Товар"

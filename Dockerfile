@@ -17,6 +17,7 @@ RUN pip install -r requirements.txt
 COPY ./ ./
 RUN mkdir -p /app/static
 RUN python3 manage.py collectstatic --noinput
+RUN python3 manage.py makemigrations
 
 # Указываем команду для запуска приложения
-CMD ["gunicorn", "parserBuildTools.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["uvicorn", "parserBuildTools.asgi:application", "--host", "0.0.0.0", "--port", "8000"]

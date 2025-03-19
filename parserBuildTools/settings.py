@@ -31,6 +31,7 @@ SECRET_KEY = 'django-insecure-#o##zeau@%t(4mjl@%&6=l8zvso6j%p^+zm82t=pc1qv0e&=)e
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://21a9-195-24-158-138.ngrok-free.app']
 
 
 # Application definition
@@ -47,7 +48,8 @@ INSTALLED_APPS = [
     "sites.apps.SitesConfig",
     "goods.apps.GoodsConfig",
     'import_export',
-    'django_celery_beat'
+    'django_celery_beat',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -86,14 +88,23 @@ WSGI_APPLICATION = 'parserBuildTools.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),  # Назва бази даних
-        'USER': os.getenv('DB_USER'),       # Ім'я користувача
-        'PASSWORD': os.getenv('DB_PASSWORD'),   # Пароль
-        'HOST': os.getenv('DB_HOST'),                  # Назва сервісу з docker-compose.yml
-        'PORT': os.getenv('DB_PORT'),                # Порт PostgreSQL
+        'NAME': os.getenv('POSTGRES_DB'),  # Назва бази даних
+        'USER': os.getenv('POSTGRES_USER'),       # Ім'я користувача
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),   # Пароль
+        'HOST': os.getenv('POSTGRES_HOST'),                  # Назва сервісу з docker-compose.yml
+        'PORT': os.getenv('POSTGRES_PORT'),                # Порт PostgreSQL
     }
 }
 # Password validation
@@ -151,3 +162,13 @@ CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 
+
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('redis', 6379)],
+        },
+    },
+}

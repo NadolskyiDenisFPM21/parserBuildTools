@@ -14,7 +14,6 @@ def price_to_int(price: str):
 
     # Заменяем все запятые на точки
     price = price.replace(',', '.')
-
     # Находим все числовые последовательности (включая десятичные точки)
     match = re.search(r'\d+(\.\d+)?', price)
 
@@ -26,7 +25,7 @@ def price_to_int(price: str):
         else:
             return int(number_str)
     else:
-        return None
+        return 0
 
 
 class AsyncParser:
@@ -41,7 +40,7 @@ class AsyncParser:
             async with session.get(link['link'], headers=headers, timeout=aiohttp.ClientTimeout(total=10)) as response:
                 text = await response.text()
                 price_tags = BeautifulSoup(text, 'html.parser').select(tags_trail)
-                price = price_tags[0].text if price_tags else -1
+                price = price_tags[0].text if price_tags else "0"
                 price = price_to_int(price)
                 return {'id': link['id'], 'price': price}
         except (ClientConnectorError, aiohttp.ClientError, asyncio.TimeoutError) as e:
